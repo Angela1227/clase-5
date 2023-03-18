@@ -1,9 +1,9 @@
-public class Resultado {
+public class Resultado extends Programación {
 
-	public static void main(String[] args) {
+	public void main(String[] args) {
 		
 
-		productos carrito = new productos();
+		Programación carrito = new Programación();
 		carrito.main(args);
 	}
 

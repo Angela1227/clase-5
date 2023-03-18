@@ -1,4 +1,4 @@
-public class productos {
+public class Programación implements DF {
 String nombre;
 int precio;
 int total;
@@ -7,7 +7,7 @@ int descuento;
 
 
 public void main (String[] args) {
-	productos P0 = new productos();
+	Programación P0 = new Programación();
 	P0.nombre = "jabón en polvo";
 	P0.cantidad = 2;
 	P0.precio = 40;
@@ -20,7 +20,7 @@ public void main (String[] args) {
 	System.out.println("descuento: %" + P0.descuento);
 	System.out.println("precio total de " + P0.nombre + " es igual a " + P0.total);
 
-	productos P1 = new productos();
+	Programación P1 = new Programación();
 	
 	P1.nombre = "esponjas";
 	P1.cantidad = 3;
@@ -34,12 +34,12 @@ public void main (String[] args) {
 	System.out.println("descuento: %" + P1.descuento);
 	System.out.println("precio total de " + P1.nombre + " es igual a " + P1.total);
     
-	productos P2 = new productos();
+	Programación P2 = new Programación();
 	P2.nombre = "chocolate";
 	P2.cantidad = 2;
 	P2.precio = 100;
-	P2.descuento = 0;
-	P2.total = P2.cantidad * ( P2.precio - P2.precio * P2.descuento / 100);
+	P2.descuento = DF;
+	P2.total = P2.cantidad * ( P2.precio - (P2.precio * P2.descuento) / 100);
 	
 	
 	System.out.println("nombre:" + P2.nombre);
@@ -48,9 +48,13 @@ public void main (String[] args) {
 	System.out.println("descuento: %" + P2.descuento);
 	System.out.println("precio total de " + P2.nombre + " es igual a " + P2.total);
 	
-	productos carrito1 = new productos();
+	Programación carrito1 = new Programación();
 	carrito1.total = P0.total + P2.total + P1.total;
 	
 	System.out.println("El precio total del carrito es de " + carrito1.total);
 	}
+public int D() {
+	return 2 * (100 - (100* 40) / 100);
+}
+
 }
